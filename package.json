@@ -1,0 +1,19 @@
+{
+  "name": "agenciaviajes",
+  "version": "1.0.0",
+  "description": "Agencia de Viajes con Vite + Express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miguelruizF/AgenciaViajes.git"
+  },
+  "author": "Miguel Angel Ruiz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miguelruizF/AgenciaViajes/issues"
+  },
+  "homepage": "https://github.com/miguelruizF/AgenciaViajes#readme"
+}
