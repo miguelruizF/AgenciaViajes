@@ -11,6 +11,12 @@ const app = express();
 //Habilitar pug
 app.set('view engine', 'pug');
 
+//Obtener año actual
+app.use((req, res, next) => {
+    res.locals.actualYear = new Date().getFullYear();
+    next();
+})
+
 //Definir carpeta publica
 app.use(express.static('public'));
 
