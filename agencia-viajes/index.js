@@ -14,6 +14,7 @@ app.set('view engine', 'pug');
 //Obtener año actual
 app.use((req, res, next) => {
     res.locals.actualYear = new Date().getFullYear();
+    res.locals.nombreSitio = 'Agencia de viajes';
     next();
 })
 
