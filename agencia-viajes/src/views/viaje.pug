@@ -1,0 +1,38 @@
+extends ./layout/index
+
+block contenido
+    h1(class="mt-5 text-center") #{viaje.titulo}
+    main.container.mt-5
+        .row
+            .col-md-5
+                img(src=`img/destinos_${viaje.imagen}_ln.jpg`, alt=viaje.titulo, class="img-fluid")
+            .col-md-7
+                h2= viaje.titulo
+                p
+                    svg(xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewbox='0 0 24 24' fill='none' stroke='#aa31a6' stroke-width='1' stroke-linecap='round' stroke-linejoin='round')
+                        path(d='M10.5 21h-4.5a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v3')
+                        path(d='M16 3v4')
+                        path(d='M8 3v4')
+                        path(d='M4 11h10')
+                        path(d='M18 18m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0')
+                        path(d='M18 16.5v1.5l.5 .5')
+                    | #{ viaje.fecha_ida } - #{ viaje.fecha_vuelta }
+
+                p 
+                    svg(xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewbox='0 0 24 24' fill='none' stroke='#aa31a6' stroke-width='1' stroke-linecap='round' stroke-linejoin='round')
+                        path(d='M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2')
+                        path(d='M9 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z')
+                        path(d='M14 11h-2.5a1.5 1.5 0 0 0 0 3h1a1.5 1.5 0 0 1 0 3h-2.5')
+                        path(d='M12 17v1m0 -8v1')
+                    | #{viaje.precio} dolares
+                p 
+                    svg(xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewbox='0 0 24 24' fill='none' stroke='#aa31a6' stroke-width='1' stroke-linecap='round' stroke-linejoin='round')
+                        path(d='M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0')
+                        path(d='M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2')
+                        path(d='M16 3.13a4 4 0 0 1 0 7.75')
+                        path(d='M21 21v-2a4 4 0 0 0 -3 -3.85')
+
+                    | #{viaje.disponibles} disponibles
+
+                p= viaje.descripcion
+
