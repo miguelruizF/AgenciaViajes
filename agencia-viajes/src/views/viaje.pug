@@ -1,13 +1,13 @@
 extends ./layout/index
 
 block contenido
-    h1(class="mt-5 text-center") #{viaje.titulo}
+    //h1(class="mt-5 text-center") #{viaje.titulo}
     main.container.mt-5
         .row
             .col-md-5
-                img(src=`img/destinos_${viaje.imagen}_ln.jpg`, alt=viaje.titulo, class="img-fluid")
+                img(src=`/img/destinos_${viaje.imagen}_ln.jpg`, alt="imagen viaje", class="img-fluid")
             .col-md-7
-                h2= viaje.titulo
+                h1 #{viaje.titulo}
                 p
                     svg(xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewbox='0 0 24 24' fill='none' stroke='#aa31a6' stroke-width='1' stroke-linecap='round' stroke-linejoin='round')
                         path(d='M10.5 21h-4.5a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v3')
