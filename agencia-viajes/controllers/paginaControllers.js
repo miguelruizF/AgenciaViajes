@@ -1,3 +1,4 @@
+import { Testimonial } from '../models/Testimoniales.js';
 import { Viaje } from '../models/Viajes.js';
 
 //Generar controladores
@@ -24,10 +25,16 @@ const paginaViajes = async (req, res) => {
     })
 }
 
-const paginaTestimoniales = (req, res) => {
-    res.render('testimoniales', {
-        pagina: 'Testimoniales'
-    })
+const paginaTestimoniales = async(req, res) => {
+    try {
+        const testimoniales = await Testimonial.findAll();
+        res.render('testimoniales', {
+            pagina: 'Testimoniales',
+            testimoniales
+        })
+    } catch (error) {
+        console.log(error)
+    }
 }
 
 //Pagina de detalle de viaje
