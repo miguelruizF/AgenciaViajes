@@ -3,15 +3,22 @@ import { Viaje } from '../models/Viajes.js';
 
 //Generar controladores
 const paginaInicio = async (req, res) => {
+
+    const promiseDB = [];
+    promiseDB.push(Viaje.findAll({ limit: 3 }));
+    promiseDB.push(Testimonial.findAll({ limit: 3 }));
     //Consultar 3 viajes del modelo Viaje
     try{
         
-        const viajes = await Viaje.findAll({ limit: 3 });
+        const resultado = await Promise.all(promiseDB);
+        const viajes = resultado[0];
+        const testimoniales = resultado[1];
 
         res.render('inicio', {
             pagina: 'Inicio',
             clase: 'home',
-            viajes
+            viajes,
+            testimoniales
         })
     } catch (error) {
         console.log(error)
