@@ -1,7 +1,17 @@
 //- Trae la plantilla principal -> index.pug
 extends ./layout/index
 
+block slider
+    .slider
+        h1 Rio de Janeiro
+        em Aventura
+
 block contenido
     main.container.mt-5
-        .row
-        h1 #{pagina}
+        h2.text-center.mb-5 Sobre Nosotros
+        .row.mb-5 
+            .col-md-6
+                p Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                p Donec magna mi, congue nec varius et, viverra non turpis. Nunc eget augue ultricies ligula imperdiet eleifend eu ut tortor. Aliquam imperdiet dictum auctor. Aliquam a accumsan diam, sed vulputate ligula.
+            .col-md-6
+                img(src="/img/inicio_nosotros.jpg", alt="imagen sobre nosotros", class="img-fluid")

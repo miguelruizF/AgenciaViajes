@@ -8,9 +8,11 @@ html(lang="en")
         link(rel="stylesheet", href="/css/bootstrap.css")
         link(rel="stylesheet", href="/css/style.css")
         link(href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Staatliches&display=swap" rel="stylesheet")
-    body
+    body(class=clase)
         //- Header -> header.pug
         include header
+
+        block slider
 
         //- Contenido -> inicio.pug
         block contenido
